@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bhmy1im71mgvb"]
+
+[ext_resource type="Script" uid="uid://dfy05afakk4ql" path="res://scripts/MathStatue.cs" id="1_4lp80"]
+[ext_resource type="Texture2D" uid="uid://dxg050jtkafb3" path="res://resources/Tiles/TX Props.png" id="2_g1mdq"]
+[ext_resource type="Shader" uid="uid://dn2rf5pfspdbv" path="res://shaders/outline.gdshader" id="2_xs4xj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8qf3"]
+shader = ExtResource("2_xs4xj")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/pixel_scan_width = 1
+shader_parameter/outline_alpha_threshold = 0.06000000285
+shader_parameter/toggled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx171"]
+size = Vector2(37, 25)
+
+[node name="MathStatue" type="StaticBody2D" unique_id=145130984]
+script = ExtResource("1_4lp80")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=178759059]
+material = SubResource("ShaderMaterial_u8qf3")
+texture = ExtResource("2_g1mdq")
+region_enabled = true
+region_rect = Rect2(444, 20, 39, 74)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483371212]
+visible = false
+position = Vector2(0, 23.5)
+shape = SubResource("RectangleShape2D_yx171")
