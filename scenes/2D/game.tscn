@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cifnmwcxhdmgx" path="res://resources/Tiles/TX Tileset Stone Ground.png" id="8_641ms"]
 [ext_resource type="Texture2D" uid="uid://k35laohn4plj" path="res://resources/Tiles/TX Tileset Wall.png" id="9_55hkv"]
 [ext_resource type="PackedScene" uid="uid://bhmy1im71mgvb" path="res://scenes/2D/math_statue.tscn" id="10_xmik3"]
+[ext_resource type="PackedScene" uid="uid://gxjky6wir78o" path="res://scenes/2D/player.tscn" id="11_l5bty"]
+[ext_resource type="PackedScene" uid="uid://d02prlnisxw5l" path="res://scenes/2D/rightward_sign.tscn" id="12_3b5mr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wuoie"]
 texture = ExtResource("1_4osob")
@@ -1816,8 +1818,10 @@ sources/7 = SubResource("TileSetAtlasSource_jsoai")
 sources/8 = SubResource("TileSetAtlasSource_bisgb")
 
 [node name="Game" type="Node2D" unique_id=589387493]
+y_sort_enabled = true
 
 [node name="Map" type="Node2D" parent="." unique_id=1815027938]
+z_index = -1
 
 [node name="Background" type="TileMapLayer" parent="Map" unique_id=1831119759]
 use_parent_material = true
@@ -1829,4 +1833,10 @@ use_parent_material = true
 tile_set = SubResource("TileSet_y5ctq")
 
 [node name="MathStatue" parent="." unique_id=145130984 instance=ExtResource("10_xmik3")]
-position = Vector2(140, -64)
+position = Vector2(140, -36)
+
+[node name="Player" parent="." unique_id=1551333140 instance=ExtResource("11_l5bty")]
+position = Vector2(25, -31)
+
+[node name="RightwardSign" parent="." unique_id=1816318946 instance=ExtResource("12_3b5mr")]
+position = Vector2(28, -48)

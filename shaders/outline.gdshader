@@ -3,7 +3,7 @@ shader_type canvas_item;
 uniform vec4 outline_color : source_color = vec4(1.0);
 uniform int pixel_scan_width : hint_range(0, 5) = 1;
 uniform float outline_alpha_threshold : hint_range(0, 1, .001) = .1;
-uniform bool toggled = true;
+instance uniform bool toggled = true;
 
 bool isOutline(vec2 uv, vec2 texture_pixel_size, sampler2D tex) {
 	vec4 center_pixel = texture(tex, uv);

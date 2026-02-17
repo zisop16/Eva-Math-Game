@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cptnrlb1lgxli"]
+
+[ext_resource type="Shader" uid="uid://dn2rf5pfspdbv" path="res://shaders/outline.gdshader" id="1_qo0mh"]
+
+[resource]
+shader = ExtResource("1_qo0mh")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/pixel_scan_width = 1
+shader_parameter/outline_alpha_threshold = 0.06000000285

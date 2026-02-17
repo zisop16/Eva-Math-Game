@@ -2,3 +2,17 @@ root = true
 
 [*]
 charset = utf-8
+
+csharp_new_line_before_open_brace = none
+
+# CA1050: Declare types in namespaces
+dotnet_diagnostic.CA1050.severity = none
+
+# IDE0221: Add explicit cast
+dotnet_diagnostic.IDE0221.severity = none
+
+# CA2211: Non-constant fields should not be visible
+dotnet_diagnostic.CA2211.severity = none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none

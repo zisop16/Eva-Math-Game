@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://u4s3qqpytjcd"]
+
+[ext_resource type="Theme" uid="uid://cgm0g53tqo6kn" path="res://resources/UI_theme/theme.tres" id="1_o3axy"]
+[ext_resource type="Script" uid="uid://vcbmv0yas8fw" path="res://scripts/MathUI.cs" id="1_qu6lp"]
+[ext_resource type="Script" uid="uid://c75yhh8on1rlu" path="res://scripts/LabelContainerFill.cs" id="2_ue7bk"]
+
+[node name="MathUI" type="Control" unique_id=1447468802]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qu6lp")
+
+[node name="Control" type="Control" parent="." unique_id=2078794125]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OutsideColor" type="ColorRect" parent="Control" unique_id=1557366155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36862746, 0.27450982, 0.11372549, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1727005669]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o3axy")
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="InsideColor" type="ColorRect" parent="Control/MarginContainer" unique_id=658037537]
+layout_mode = 2
+color = Color(0.9756667, 1, 0.26999998, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer" unique_id=199990086]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/MarginContainer" unique_id=7563824]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer" unique_id=1598547968]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="LabelContainerFill" type="Container" parent="Control/MarginContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1316408854]
+layout_mode = 2
+script = ExtResource("2_ue7bk")
+metadata/_custom_type_script = "uid://c75yhh8on1rlu"
+
+[node name="Label" type="Label" parent="Control/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/LabelContainerFill" unique_id=605490284]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "it Math Time Ok?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Operation" type="HBoxContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer" unique_id=1643291389]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation" unique_id=216929778]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.35
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel" unique_id=2058475653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LabelContainerFill" type="Container" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel/MarginContainer" unique_id=278682579]
+layout_mode = 2
+script = ExtResource("2_ue7bk")
+metadata/_custom_type_script = "uid://c75yhh8on1rlu"
+
+[node name="Num1" type="Label" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel/MarginContainer/LabelContainerFill" unique_id=174902028]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "324"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation" unique_id=191188951]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LabelContainerFill" type="Container" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/MarginContainer" unique_id=1448113971]
+layout_mode = 2
+script = ExtResource("2_ue7bk")
+metadata/_custom_type_script = "uid://c75yhh8on1rlu"
+
+[node name="Operator" type="Label" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/MarginContainer/LabelContainerFill" unique_id=1167536056]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 174
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation" unique_id=426878505]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.35
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel2" unique_id=320466360]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LabelContainerFill" type="Container" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel2/MarginContainer" unique_id=95800675]
+layout_mode = 2
+script = ExtResource("2_ue7bk")
+metadata/_custom_type_script = "uid://c75yhh8on1rlu"
+
+[node name="Num2" type="Label" parent="Control/MarginContainer/MarginContainer/VBoxContainer/Operation/Panel2/MarginContainer/LabelContainerFill" unique_id=2123246211]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "326"
+horizontal_alignment = 1
+
+[node name="Equals" type="HBoxContainer" parent="Control/MarginContainer/MarginContainer/VBoxContainer" unique_id=991910280]
+layout_mode = 2
+size_flags_vertical = 3
